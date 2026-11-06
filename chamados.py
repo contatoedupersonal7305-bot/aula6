@@ -1,214 +1,220 @@
-chamados = [
-  { "id": 1, "titulo": "Erro no login", "prioridade": "Alta", "status": "Aberto", "usuario": "Ana Silva" },
-  { "id": 2, "titulo": "Tela branca no app", "prioridade": "Crítica", "status": "Aberto", "usuario": "Bruno Costa" },
-  { "id": 3, "titulo": "Atualizar cadastro", "prioridade": "Baixa", "status": "Em progresso", "usuario": "Carlos Souza" },
-  { "id": 4, "titulo": "Boleto não gerado", "prioridade": "Média", "status": "Aberto", "usuario": "Daniela Lima" },
-  { "id": 5, "titulo": "Botão quebrado", "prioridade": "Baixa", "status": "Aberto", "usuario": "Eduardo Rocha" },
-  { "id": 6, "titulo": "Lentidão na busca", "prioridade": "Média", "status": "Em progresso", "usuario": "Fernanda Alves" },
-  { "id": 7, "titulo": "Recuperar senha", "prioridade": "Alta", "status": "Aberto", "usuario": "Gabriel Santos" },
-  { "id": 8, "titulo": "Erro no Pix", "prioridade": "Crítica", "status": "Aberto", "usuario": "Amanda Melo" },
-  { "id": 9, "titulo": "Mudar foto de perfil", "prioridade": "Baixa", "status": "Fechado", "usuario": "Igor Ribeiro" },
-  { "id": 10, "titulo": "Exportar PDF falhou", "prioridade": "Média", "status": "Aberto", "usuario": "Juliana Vieira" },
-  { "id": 11, "titulo": "Carrinho esvaziando", "prioridade": "Alta", "status": "Em progresso", "usuario": "Lucas Martins" },
-  { "id": 12, "titulo": "Cupom inválido", "prioridade": "Média", "status": "Aberto", "usuario": "Mariana Dias" },
-  { "id": 13, "titulo": "Página 404 no FAQ", "prioridade": "Baixa", "status": "Aberto", "usuario": "Nicolas Ferreira" },
-  { "id": 14, "titulo": "Atraso na entrega", "prioridade": "Alta", "status": "Aberto", "usuario": "Patricia Gomes" },
-  { "id": 15, "titulo": "Email de boas-vindas", "prioridade": "Baixa", "status": "Fechado", "usuario": "Rodrigo Ramos" },
-  { "id": 16, "titulo": "Estorno pendente", "prioridade": "Alta", "status": "Em progresso", "usuario": "Sabrina Oliveira" },
-  { "id": 17, "titulo": "Alerta de segurança", "prioridade": "Crítica", "status": "Aberto", "usuario": "Thiago Barbosa" },
-  { "id": 18, "titulo": "Link quebrado no menu", "prioridade": "Baixa", "status": "Aberto", "usuario": "Vanessa Cunha" },
-  { "id": 19, "titulo": "Nota fiscal sumiu", "prioridade": "Média", "status": "Aberto", "usuario": "Willian Cardoso" },
-  { "id": 20, "titulo": "Modo escuro travando", "prioridade": "Baixa", "status": "Em progresso", "usuario": "Yasmim Lopes" },
-  { "id": 21, "titulo": "Erro na API de CEP", "prioridade": "Alta", "status": "Aberto", "usuario": "Arthur Antunes" },
-  { "id": 22, "titulo": "Notificação duplicada", "prioridade": "Baixa", "status": "Aberto", "usuario": "Beatriz Mendes" },
-  { "id": 23, "titulo": "Sessão expirando rápido", "prioridade": "Média", "status": "Em progresso", "usuario": "Caio Nogueira" },
-  { "id": 24, "titulo": "Erro no cartão de crédito", "prioridade": "Crítica", "status": "Aberto", "usuario": "Diana Prince" },
-  { "id": 25, "titulo": "Traduzir termo em inglês", "prioridade": "Baixa", "status": "Fechado", "usuario": "Elton John" },
-  { "id": 26, "titulo": "Chat de suporte offline", "prioridade": "Alta", "status": "Aberto", "usuario": "Fábio Assunção" },
-  { "id": 27, "titulo": "Upload de comprovante", "prioridade": "Média", "status": "Aberto", "usuario": "Gisele Bündchen" },
-  { "id": 28, "titulo": "Histórico sumiu", "prioridade": "Alta", "status": "Em progresso", "usuario": "Heitor Villa" },
-  { "id": 29, "titulo": "Termos de uso desatualizados", "prioridade": "Baixa", "status": "Aberto", "usuario": "Isabela Garcia" },
-  { "id": 30, "titulo": "Erro 500 no checkout", "prioridade": "Crítica", "status": "Aberto", "usuario": "Jorge Ben" },
-  { "id": 31, "titulo": "Ajustar margem do header", "prioridade": "Baixa", "status": "Em progresso", "usuario": "Karina Bacchi" },
-  { "id": 32, "titulo": "Filtro por data quebrado", "prioridade": "Média", "status": "Aberto", "usuario": "Leonardo Dicaprio" },
-  { "id": 33, "titulo": "Assinatura não renovada", "prioridade": "Alta", "status": "Aberto", "usuario": "Marta Vieira" },
-  { "id": 34, "titulo": "Áudio do vídeo não funciona", "prioridade": "Média", "status": "Aberto", "usuario": "Neymar Junior" },
-  { "id": 35, "titulo": "Atualizar política de privacidade", "prioridade": "Baixa", "status": "Fechado", "usuario": "Otávio Mesquita" },
-  { "id": 36, "titulo": "Queda do servidor interno", "prioridade": "Crítica", "status": "Em progresso", "usuario": "Paula Toller" },
-  { "id": 37, "titulo": "Convite por email falhou", "prioridade": "Baixa", "status": "Aberto", "usuario": "Quintino Aires" },
-  { "id": 38, "titulo": "Extrato em branco", "prioridade": "Alta", "status": "Aberto", "usuario": "Renata Vasconcellos" },
-  { "id": 39, "titulo": "ícone errado no painel", "prioridade": "Baixa", "status": "Aberto", "usuario": "Samuel Rosa" },
-  { "id": 40, "titulo": "Duplicidade de cobrança", "prioridade": "Crítica", "status": "Aberto", "usuario": "Tais Araújo" },
-  { "id": 41, "titulo": "Validação de CNPJ", "prioridade": "Média", "status": "Em progresso", "usuario": "Umberto Eco" },
-  { "id": 42, "titulo": "Mensagem de erro confusa", "prioridade": "Baixa", "status": "Aberto", "usuario": "Valéria Valenssa" },
-  { "id": 43, "titulo": "Problema com fonte negrito", "prioridade": "Baixa", "status": "Aberto", "usuario": "Wagner Moura" },
-  { "id": 44, "titulo": "Links de redes sociais fora do ar", "prioridade": "Média", "status": "Aberto", "usuario": "Xuxa Meneghel" },
-  { "id": 45, "titulo": "Sem sinal de geolocalização", "prioridade": "Alta", "status": "Em progresso", "usuario": "Yuri Gagarin" },
-  { "id": 46, "titulo": "Página recarregando sozinha", "prioridade": "Alta", "status": "Aberto", "usuario": "Zeca Pagodinho" },
-  { "id": 47, "titulo": "Gráfico de vendas travado", "prioridade": "Média", "status": "Aberto", "usuario": "Alinne Moraes" },
-  { "id": 48, "titulo": "Impossível remover endereço", "prioridade": "Média", "status": "Em progresso", "usuario": "Beto Jamaica" },
-  { "id": 49, "titulo": "Vazamento de memória na aba", "prioridade": "Crítica", "status": "Aberto", "usuario": "Cláudia Raia" },
-  { "id": 50, "titulo": "Ajustar alinhamento do rodapé", "prioridade": "Baixa", "status": "Fechado", "usuario": "Dado Dolabella" }
-]
+import sqlite3
+
+# 1. Conecta ao banco de dados (cria o arquivo chamados.db na mesma pasta)
+conn = sqlite3.connect('chamados.db')
+cursor = conn.cursor()
+
+# 2. Cria a tabela no banco de dados se ela ainda não existir
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS chamados (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo TEXT,
+    prioridade TEXT,
+    status TEXT,
+    usuario TEXT
+)
+''')
+conn.commit()
+
+# 3. Colocamos a sua lista completa aqui para preencher o banco de dados na primeira vez
+def popular_banco_inicial():
+    # Verifica se o banco já tem dados. Se estiver vazio (0), ele insere sua lista.
+    cursor.execute("SELECT COUNT(*) FROM chamados")
+    if cursor.fetchone()[0] == 0:
+        chamados_iniciais = [
+            ("Erro no login", "Alta", "Aberto", "Ana Silva"),
+            ("Tela branca no app", "Crítica", "Aberto", "Bruno Costa"),
+            ("Atualizar cadastro", "Baixa", "Em progresso", "Carlos Souza"),
+            ("Boleto não gerado", "Média", "Aberto", "Daniela Lima"),
+            ("Botão quebrado", "Baixa", "Aberto", "Eduardo Rocha"),
+            ("Lentidão na busca", "Média", "Em progresso", "Fernanda Alves"),
+            ("Recuperar senha", "Alta", "Aberto", "Gabriel Santos"),
+            ("Erro no Pix", "Crítica", "Aberto", "Amanda Melo"),
+            ("Mudar foto de perfil", "Baixa", "Fechado", "Igor Ribeiro"),
+            ("Exportar PDF falhou", "Média", "Aberto", "Juliana Vieira"),
+            ("Carrinho esvaziando", "Alta", "Em progresso", "Lucas Martins"),
+            ("Cupom inválido", "Média", "Aberto", "Mariana Dias"),
+            ("Página 404 no FAQ", "Baixa", "Aberto", "Nicolas Ferreira"),
+            ("Atraso na entrega", "Alta", "Aberto", "Patricia Gomes"),
+            ("Email de boas-vindas", "Baixa", "Fechado", "Rodrigo Ramos"),
+            ("Estorno pendente", "Alta", "Em progresso", "Sabrina Oliveira"),
+            ("Alerta de segurança", "Crítica", "Aberto", "Thiago Barbosa"),
+            ("Link quebrado no menu", "Baixa", "Aberto", "Vanessa Cunha"),
+            ("Nota fiscal sumiu", "Média", "Aberto", "Willian Cardoso"),
+            ("Modo escuro travando", "Baixa", "Em progresso", "Yasmim Lopes"),
+            ("Erro na API de CEP", "Alta", "Aberto", "Arthur Antunes"),
+            ("Notificação duplicada", "Baixa", "Aberto", "Beatriz Mendes"),
+            ("Sessão expirando rápido", "Média", "Em progresso", "Caio Nogueira"),
+            ("Erro no cartão de crédito", "Crítica", "Aberto", "Diana Prince"),
+            ("Traduzir termo em inglês", "Baixa", "Fechado", "Elton John"),
+            ("Chat de suporte offline", "Alta", "Aberto", "Fábio Assunção"),
+            ("Upload de comprovante", "Média", "Aberto", "Gisele Bündchen"),
+            ("Histórico sumiu", "Alta", "Em progresso", "Heitor Villa"),
+            ("Termos de uso desatualizados", "Baixa", "Aberto", "Isabela Garcia"),
+            ("Erro 500 no checkout", "Crítica", "Aberto", "Jorge Ben"),
+            ("Ajustar margem do header", "Baixa", "Em progresso", "Karina Bacchi"),
+            ("Filtro por data quebrado", "Média", "Aberto", "Leonardo Dicaprio"),
+            ("Assinatura não renovada", "Alta", "Aberto", "Marta Vieira"),
+            ("Áudio do vídeo não funciona", "Média", "Aberto", "Neymar Junior"),
+            ("Atualizar política de privacidade", "Baixa", "Fechado", "Otávio Mesquita"),
+            ("Queda do servidor interno", "Crítica", "Em progresso", "Paula Toller"),
+            ("Convite por email falhou", "Baixa", "Aberto", "Quintino Aires"),
+            ("Extrato em branco", "Alta", "Aberto", "Renata Vasconcellos"),
+            ("ícone errado no painel", "Baixa", "Aberto", "Samuel Rosa"),
+            ("Duplicidade de cobrança", "Crítica", "Aberto", "Tais Araújo"),
+            ("Validação de CNPJ", "Média", "Em progresso", "Umberto Eco"),
+            ("Mensagem de erro confusa", "Baixa", "Aberto", "Valéria Valenssa"),
+            ("Problema com fonte negrito", "Baixa", "Aberto", "Wagner Moura"),
+            ("Links de redes sociais fora do ar", "Média", "Aberto", "Xuxa Meneghel"),
+            ("Sem sinal de geolocalização", "Alta", "Em progresso", "Yuri Gagarin"),
+            ("Página recarregando sozinha", "Alta", "Aberto", "Zeca Pagodinho"),
+            ("Gráfico de vendas travado", "Média", "Aberto", "Alinne Moraes"),
+            ("Impossível remover endereço", "Média", "Em progresso", "Beto Jamaica"),
+            ("Vazamento de memória na aba", "Crítica", "Aberto", "Cláudia Raia"),
+            ("Ajustar alinhamento do rodapé", "Baixa", "Fechado", "Dado Dolabella")
+        ]
+        # Aqui ele insere a sua lista de uma vez no banco
+        cursor.executemany('''
+            INSERT INTO chamados (titulo, prioridade, status, usuario) 
+            VALUES (?, ?, ?, ?)
+        ''', chamados_iniciais)
+        conn.commit()
+
+# Executa a função para garantir que a lista esteja lá
+popular_banco_inicial()
+
+
+# --- Funções do Sistema adaptadas para buscar no banco de dados ---
 
 def usuario():
-  user = input("Digite o Usuário: ")
+    user = input("Digite o Usuário: ")
+    cursor.execute("SELECT id, titulo, status FROM chamados WHERE usuario LIKE ?", (user,))
+    resultados = cursor.fetchall()
 
-  encontrado = False
-  for chamado in chamados:
-    if chamado["usuario"].lower() == user.lower():
-      print(f"ID: {chamado['id']} | Título: {chamado['titulo']} | Status: {chamado['status']}")
-      encontrado = True
-
-  if not encontrado:
-    print("Usuário não encontrado.")
+    if resultados:
+        for row in resultados:
+            print(f"ID: {row[0]} | Título: {row[1]} | Status: {row[2]}")
+    else:
+        print("Usuário não encontrado.")
 
 def prioridade():
-  escolha = input(
-      "Qual prioridade você quer ver? (Crítica, Alta, Média, Baixa): "
-  )
+    escolha = input("Qual prioridade você quer ver? (Crítica, Alta, Média, Baixa): ")
+    print(f"\n--- Chamados com Prioridade: {escolha} ---")
+    
+    cursor.execute("SELECT id, titulo, usuario FROM chamados WHERE prioridade LIKE ?", (escolha,))
+    resultados = cursor.fetchall()
 
-  print(f"\n--- Chamados com Prioridade: {escolha} ---")
-  encontrou = False
+    if resultados:
+        for row in resultados:
+            print(f"ID: {row[0]} | Título: {row[1]} | Usuário: {row[2]}")
+    else:
+        print("Nenhum chamado encontrado com essa prioridade.")
 
-  for chamado in chamados:
-    if chamado["prioridade"].lower() == escolha.lower():
-      print(
-          f"ID: {chamado['id']} | Título: {chamado['titulo']} | Usuário:"
-          f" {chamado['usuario']}"
-      )
-      encontrou = True
-
-  if not encontrou:
-    print("Nenhum chamado encontrado com essa prioridade.")
 def status():
-  escolha = input(
-      "Qual status você quer ver? (Aberto, Em progresso, Fechado): "
-  )
+    escolha = input("Qual status você quer ver? (Aberto, Em progresso, Fechado): ")
+    print(f"\n--- Chamados com Status: {escolha} ---")
+    
+    cursor.execute("SELECT id, titulo, usuario FROM chamados WHERE status LIKE ?", (escolha,))
+    resultados = cursor.fetchall()
 
-  print(f"\n--- Chamados com Status: {escolha} ---")
-  encontrou = False
+    if resultados:
+        for row in resultados:
+            print(f"ID: {row[0]} | Título: {row[1]} | Usuário: {row[2]}")
+    else:
+        print("Nenhum chamado encontrado com esse status.")
 
-  for chamado in chamados:
-    if chamado["status"].lower() == escolha.lower():
-      print(
-          f"ID: {chamado['id']} | Título: {chamado['titulo']} | Usuário:"
-          f" {chamado['usuario']}"
-      )
-      encontrou = True
-
-  if not encontrou:
-    print("Nenhum chamado encontrado com esse status.")
 def urgencia():
-    for chamado in chamados:
-      if chamado["status"] == "Aberto" and chamado["prioridade"] == "Crítica":
-            print(chamado["id"], chamado["titulo"], chamado["status"])
+    cursor.execute("SELECT id, titulo, status FROM chamados WHERE status = 'Aberto' AND prioridade = 'Crítica'")
+    resultados = cursor.fetchall()
+    
+    if resultados:
+        for row in resultados:
+            print(f"{row[0]} | {row[1]} | {row[2]}")
+    else:
+        print("Nenhum chamado urgente no momento.")
 
 def abrir():
-    id = input("Digite o ID do chamado ")
     titulo = input("Digite o nome do Chamado: ")
     prioridade = input("Digite a Prioridade: ")
     status = input("Digite o Status: ")
     user = input("Digite o Usuário: ")
     
-    nova_tarefa = {
-        "id": id,
-        "titulo": titulo,
-        "prioridade": prioridade,
-        "status": status,
-        "usuario": user
+    # Adiciona um novo chamado na tabela do banco
+    cursor.execute('''
+        INSERT INTO chamados (titulo, prioridade, status, usuario) 
+        VALUES (?, ?, ?, ?)
+    ''', (titulo, prioridade, status, user))
+    conn.commit()
+    print("Chamado aberto com sucesso!")
 
-    }
-    chamados.append(nova_tarefa)
-    print(chamados)
 def resolver():
-  print("--- Tarefas Disponíveis ---")
-  for chamado in chamados:
-    print(
-        f"Título: {chamado['titulo']} | Status atual: {chamado['status']}"
-    )
+    print("--- Tarefas Disponíveis ---")
+    cursor.execute("SELECT titulo, status FROM chamados")
+    for row in cursor.fetchall():
+        print(f"Título: {row[0]} | Status atual: {row[1]}")
 
-  chamado_desejado = input(
-      "Qual tarefa deseja finalizar? "
-  )
+    chamado_desejado = input("\nQual tarefa deseja finalizar? ")
 
-  encontrado = False
-  for chamado in chamados:
-    if chamado["titulo"].lower() == chamado_desejado.lower():
-      encontrado = True
+    cursor.execute("SELECT id, status FROM chamados WHERE titulo LIKE ?", (chamado_desejado,))
+    chamado = cursor.fetchone()
 
-      
-      if chamado["status"] == "Em progresso":
-        chamado["status"] = "Fechado"
-        print(
-            f"O Chamado '{chamado_desejado}' que estava em progresso foi finalizado com sucesso!"
-        )
-      else:
-        print(
-            f"O Chamado '{chamado_desejado}' não pode ser fechado porque o status atual é: {chamado['status']}"
-        )
-      break
+    if chamado:
+        id_chamado = chamado[0]
+        status_atual = chamado[1]
 
-  if not encontrado:
-    print("Tarefa não encontrada.")
+        if status_atual == "Em progresso":
+            # Atualiza o status do chamado no banco de dados
+            cursor.execute("UPDATE chamados SET status = 'Fechado' WHERE id = ?", (id_chamado,))
+            conn.commit()
+            print(f"O Chamado '{chamado_desejado}' foi finalizado com sucesso!")
+        else:
+            print(f"O Chamado '{chamado_desejado}' não pode ser fechado porque o status atual é: {status_atual}")
+    else:
+        print("Tarefa não encontrada.")
 
 def fechar():
     print("--- Tarefas Disponíveis ---")
-    for chamado in chamados:
-      print(
-          f"Título: {chamado['titulo']} | Status atual: {chamado['status']}"
-        )  
-    chamado_desejado = input(
-        "Qual tarefa deseja fechar? "
-    )
-    
-    encontrado = False
-    for chamado in chamados:
-      if chamado["titulo"].lower() == chamado_desejado.lower():
-        encontrado = True
-    
-          
-        if chamado["status"] == "Aberto":
-            chamado["status"] = "Fechado"
-            print(
-                f"O Chamado '{chamado_desejado}' que estava aberto foi finalizado com sucesso!"
-            )
+    cursor.execute("SELECT titulo, status FROM chamados")
+    for row in cursor.fetchall():
+        print(f"Título: {row[0]} | Status atual: {row[1]}")
+
+    chamado_desejado = input("\nQual tarefa deseja fechar? ")
+
+    cursor.execute("SELECT id, status FROM chamados WHERE titulo LIKE ?", (chamado_desejado,))
+    chamado = cursor.fetchone()
+
+    if chamado:
+        id_chamado = chamado[0]
+        status_atual = chamado[1]
+
+        if status_atual == "Aberto":
+            # Atualiza o status do chamado no banco de dados
+            cursor.execute("UPDATE chamados SET status = 'Fechado' WHERE id = ?", (id_chamado,))
+            conn.commit()
+            print(f"O Chamado '{chamado_desejado}' foi fechado com sucesso!")
         else:
-            print(
-                f"O Chamado '{chamado_desejado}' não pode ser fechado porque o status atual é: {chamado['status']}"
-            )
-        break
-    
-      if not encontrado:
+            print(f"O Chamado '{chamado_desejado}' não pode ser fechado porque o status atual é: {status_atual}")
+    else:
         print("Tarefa não encontrada.")
-    
-    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-print("#Lista de Tarefas#")
-print("1 - Pesquisa por Usuário")
-print("2 - Pesquisa por Prioridade")
-print("3 - Pesquisa por Status")
-print("4 - Chamados urgentes (Crítico e Abertos)")
-print("5 - Abrir chamado")
-print("6 - Resolver chamado")
-print("7 - Fechar chamado")
-print("0 - Sair")
-
+# --- Menu Principal ---
 while True:
-    pergunta = int(input("Qual opção deseja? "))
+    print("\n# Lista de Tarefas #")
+    print("1 - Pesquisa por Usuário")
+    print("2 - Pesquisa por Prioridade")
+    print("3 - Pesquisa por Status")
+    print("4 - Chamados urgentes (Crítico e Abertos)")
+    print("5 - Abrir chamado")
+    print("6 - Resolver chamado")
+    print("7 - Fechar chamado")
+    print("0 - Sair")
+
+    try:
+        pergunta = int(input("\nQual opção deseja? "))
+    except ValueError:
+        print("Digite apenas números.")
+        continue
 
     if pergunta == 1:
         usuario()
@@ -219,15 +225,14 @@ while True:
     elif pergunta == 4:
         urgencia()
     elif pergunta == 5:
-      abrir()
+        abrir()
     elif pergunta == 6:
         resolver()
     elif pergunta == 7:
         fechar()
     elif pergunta == 0:
         print("Programa Finalizado! Até a Próxima...")
+        conn.close() 
         break
     else:
-        print("Opção Inválida, tente novamente")
-        pergunta = int(input("Qual opção deseja? "))
-        
+        print("Opção Inválida, tente novamente.")
